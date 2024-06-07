@@ -1,0 +1,820 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --green: #27ae60;
+    --violeta: #4961e1;
+    --blanco: #fff;
+    --gris: #333;
+}
+
+body{
+    background-color: #080202 ;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+   
+}
+
+.swiper-button-prev::after{
+    font-size: 25px;
+}
+.swiper-button-next::after{
+    font-size: 25px;
+}
+.swiper-button-next{
+    color:var(--green);
+}
+.swiper-button-prev{
+    color: var(--green);
+}
+
+.swiper-pagination-bullet{
+    background-color: #D3D2D2 ;
+    opacity: 1 ;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: var(--green);
+}
+
+
+.menu{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.navbar{
+    display: flex;
+}
+.menu-1{
+    margin-right: 180px;
+}
+
+.menu-2{
+    margin-left: 180px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-1{
+    width: 0;
+
+}
+.logo-2{
+    width: 150px;
+    
+}
+.logo-22{
+   
+    width: 100px;
+    height: 80PX;
+}
+
+.sociales{
+    display: flex;
+}
+.social{
+    margin: 0 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid var(--green);
+    border-radius: 50%;
+
+}
+
+.social:hover{
+    background-color: var(--green);
+}
+.social img{
+    margin: 8px 0 0 10px;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: #ffffff;
+    display: block;
+}
+
+.menu .navbar ul li a:hover{
+    color: var(--green);
+}
+
+#menu{
+    display: none;
+}
+
+.menu-icono{
+    width: 25px;
+   
+}
+
+.menu label{
+    cursor: pointer;
+    display: none;
+}
+
+.header-content{
+    margin-top: 200px;
+    padding-bottom: 50px;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--gris);
+    display: flex;
+
+    /* custom properties / Variables*/
+    
+    --opacity:0;
+    --pointer:none;
+
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition:  .5s;
+
+}
+
+.modal:target{
+    --opacity:1;
+    --pointer:unset;
+}
+
+.modal__container{
+    margin: auto;
+    background-color: var(--blanco);
+    width: 90%;
+    max-width: 600px;
+    height: 90%;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5em 1.5em;
+    border-radius: 1em;
+}
+
+.modal:target .modal__container{
+    animation: show 1s .5s backwards;
+}
+@keyframes show{
+    0%{
+        transform: translateY(-150vh);
+    }
+    
+}
+
+.modal__picture{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 400px;
+    margin-bottom: 2em;
+}
+.modal:target .modal__picture{
+    animation: scale .5s 1.5s backwards;
+}
+
+@keyframes scale{
+    0%{
+        transform: scale(0);
+    }
+}
+.modal__img{
+    width: 100%;
+    display: block;
+
+}
+
+.modal__tittle{
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.modal__tittle--bold{
+    font-weight: 700;
+}
+
+.modal__parrafo{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 1.5;
+
+}
+
+.modal__close{
+    display: inline-block;
+    border:1px solid;
+    padding: 1em 2em;
+    text-decoration: none;
+    font-weight: 700;
+    color:var(--gris);
+    border-radius: .4em;
+}
+
+@media (max-width:600px) {
+    .modal__tittle{
+        font-size: 1.7rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slider{
+    display: flex;
+    align-items: center;
+}
+
+.slider-txt{
+    margin-left: 85px;
+    width: 50% ;
+
+}
+
+.slider-txt h1{
+    font-size: 70px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 800 ;
+}
+.slider-txt p {
+    font-size: 18px;
+    color: #A7A7A7;
+}
+
+.botones{
+    margin-top: 50px;
+}
+
+.btn-1{
+    display: inline-block;
+    padding: 15px 25px;
+    border: 2px solid var(--green);
+    color: #ffffff;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    border-radius: 50px;
+}
+
+.btn-1:hover{
+    background-color: var(--green);
+}
+
+.slider-img{
+    width: 50%;
+
+}
+.slider-img img{
+    margin-right: 225px;
+    width: 550px;
+}
+
+
+
+
+.products{
+    background-color: #0d0d0d ;
+}
+.tabs{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 100px 0px;
+}
+
+.tabs label{
+    width: 15%;
+    order: 1;
+    display: block;
+    padding: 20px 0;
+    text-align: center;
+    color: #A7A7A7;
+    font-weight: 700;
+    transition: background ease 0.2s;
+}
+
+
+.tabs .tab{
+    order: 99;
+    flex-wrap: 1;
+    width: 100%;
+    display: none;
+    padding-top: 25px;
+}
+
+.tabs input[type='radio']{
+    display: none;
+}
+
+.tabs input[type='radio']:checked + label{
+    border-bottom: 2px solid var(--green);
+    color: #ffffff;
+
+}
+
+.tabs input[type='radio']:checked + label + .tab{
+    display: block;
+}
+
+.product{
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    margin: 0 10px;
+    
+}
+
+
+.product-img{
+    width: 50%;
+    text-align: left;
+}
+
+.product-img h4{
+    display: inline-block;
+    padding: 5px 7px;
+    line-height: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 800;
+    border: 2px solid #555555;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
+
+.product-img img{
+    width: 150px;
+    height: 120px;
+
+}
+
+.product-txt{
+    width: 50%;
+    margin-left: 10px;
+    text-align: left;
+}
+.product-txt h4{
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.product-txt p{
+    color: #A7A7A7;
+    font-size: 16px;
+    margin-bottom: 15px;
+
+}
+
+.product-txt span{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.info { 
+    
+ 
+    padding: 100px 0px;
+    display: flex;
+    align-items: center;
+}
+
+
+.info-img{
+    
+    display: flex;
+
+}
+
+
+.info-txt{
+    width: 100%;
+}
+
+.info-txt h2{
+    font-size: 75px;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+
+
+}
+
+.info-txt p{
+    font-size: 18px;
+    color: #A7A7A7;
+    margin-bottom: 50px;
+}
+.btn-2{
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: var(--green);
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+.btn-2:hover{
+    background-color: var(--green);
+}
+
+
+
+
+.horario{
+    padding: 100px 0px;
+    background-color: #0d0d0d;
+}
+
+.horario-info h2{
+    font-size: 75px;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+
+}
+.horario-txt{
+    display: flex;
+    justify-content: space-between;
+}
+
+.txt{
+    color: #ffffff;
+}
+
+.txt h4{ 
+    font-size: 18px;
+    color: #A7A7A7;
+    margin-bottom: 30px;
+}
+
+.txt p {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.map{
+    filter: grayscale(100%) invert(92%) contrast(93%);
+}
+
+.footer{
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links h4{
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.links ul li a{
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+
+@media(max-width: 991px){
+
+    .menu{
+        padding: 20px;
+        justify-content: space-between;
+    }
+
+    .menu-2{
+        display: none;
+    }
+
+    .logo-1{
+        width: 100px;
+    }
+
+    .logo-2{
+        width: 0;
+    }
+
+    .info-img{
+    
+        width: 30%;
+    
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #181818;
+        display: none;
+
+    }
+
+    nav{
+  
+        position: fixed; /* Fija la barra de navegación en la ventana del navegador */
+        top: 0; /* Fija la barra de navegación en la parte superior de la ventana */
+        left: 0; /* Fija la barra de navegación en la esquina izquierda de la ventana */
+        width: 100%; /* Ancho completo *
+        box-sizing: border-box; /* Incluye el padding en el ancho y alto total */
+        z-index: 1000;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .header-content{
+        padding: 30px;
+        margin-top: 100px;
+    }
+
+    .slider{
+        flex-direction: column;
+    }
+
+    .slider-txt{
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .slider-txt h1{
+        font-size: 50px;
+    }
+    .slider-txt p {
+        font-size: 16px;
+    }
+
+    .btn-1{
+        padding: 10px 25px;
+        font-size: 14px;
+
+    }
+    .slider-img{
+        width: 50%
+    }
+
+    .slider-img img{
+        margin-right: 225px;
+        width: 550px;
+    }
+    
+
+    .swiper-horizontal > .swiper-pagination-bullet,
+    .swiper-pagination-bullet, .swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction{
+        bottom: -7px;
+    }
+
+    .tabs{
+        padding: 50px 30px;
+    }
+    .tabs label{
+        width: 33%;
+    }
+
+    .info{
+        padding: 30px;
+        flex-direction: column;
+
+    }
+
+    .info-img{
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-img img{
+        width: 400px;
+        height: 200px;
+        margin-bottom: 25px;
+    }
+
+    .info-txt{
+        width: 100%;
+        text-align: center;
+    }
+
+    .info-txt h2{
+        font-size: 50px;
+    }
+    .info-txt p {
+        font-size: 16px;
+    }
+
+    .btn-1{
+        font-size: 16px;
+    }
+
+    .horario{
+        padding: 30px;
+        text-align: center;
+    }
+    .horario-info h2{
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+    .horario-txt{
+        flex-direction: column;
+    }
+    .sociales{
+        justify-content: center;
+    }
+
+    .social img{
+        margin: 8px 0 0 0;
+    }
+
+    .footer{
+        padding: 30px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links h4{
+        margin: 25px 0px 10px 0px;
+    }
+
+
+
+}
+
+
+
+
+#detallesReserva{
+    color: #ffffff;
+}
+
+
+.swiper-wrapper{
+    align-items: center;
+    justify-content: center;
+}
+
+
+h1 {
+    margin: 0;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem;
+    width: 100%;
+}
+
+.calendario, .formulario-reserva {
+    background-color: #fff;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1 1 300px;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0 0.2rem;
+}
+
+input[type="date"], select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#detallesReserva {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+#detallesReserva h2 {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        padding: 1rem;
+    }
+
+    .calendario, .formulario-reserva {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    input[type="date"], select {
+        padding: 0.4rem;
+        margin-bottom: 0.8rem;
+    }
+
+    button {
+        padding: 0.6rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .contenedor {
+        padding: 0.5rem;
+    }
+
+    .calendario, .formulario-reserva {
+        margin: 0.2rem;
+        padding: 0.5rem;
+        flex: 1 1 100%;
+    }
+
+    input[type="date"], select {
+        padding: 0.3rem;
+        margin-bottom: 0.6rem;
+    }
+
+    button {
+        padding: 0.5rem;
+    }
+}
